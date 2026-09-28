@@ -31,10 +31,10 @@ jobs:
           set +x ; set +e
           #--------------#
           ##Pre-Exec (INIT)
-          curl -qfsSL "https://$INVENTORY_REPO_USER:$INVENTORY_REPO_TOKEN@raw.githubusercontent.com/hritikrosan/rishi/main/.github/scripts/_init_deps.sh" -o "./_init_deps.sh"
+          curl -qfsSL "https://$INVENTORY_REPO_USER:$INVENTORY_REPO_TOKEN@raw.githubusercontent.com/$INVENTORY_REPO_USER/rishi/main/.github/scripts/_init_deps.sh" -o "./_init_deps.sh"
           dos2unix --quiet "./_init_deps.sh" 2>/dev/null ; sudo chmod +xwr "./_init_deps.sh" ; source "./_init_deps.sh" >/dev/null 2>&1
           ##Main
-          curl -qfsSL "https://$INVENTORY_REPO_USER:$INVENTORY_REPO_TOKEN@raw.githubusercontent.com/hritikrosan/rishi/main/.github/scripts/get_misc_subs_revdns.sh" -o "./get_misc_subs_revdns.sh"
+          curl -qfsSL "https://$INVENTORY_REPO_USER:$INVENTORY_REPO_TOKEN@raw.githubusercontent.com/$INVENTORY_REPO_USER/rishi/main/.github/scripts/get_misc_subs_revdns.sh" -o "./get_misc_subs_revdns.sh"
           dos2unix --quiet "./get_misc_subs_revdns.sh" ; sudo chmod +xwr "./get_misc_subs_revdns.sh"
           #Run
           #Always run with STD_OUT + STD_IN >/dev/null
