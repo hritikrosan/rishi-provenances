@@ -65,7 +65,7 @@ jobs:
 
       - name: Upload Results as 7z Archive 
         #if: env.GIT_PUSH_FAILED == 'true' 
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
             name: ofa_logs_output
             path: |
@@ -93,7 +93,7 @@ jobs:
 
       - name: Upload Debug Log
         if: github.event_name == 'workflow_dispatch'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
             name: gh_ofa_runner01_av_debug_log
             path: /tmp/gh_ofa_runner01_av_debug_log.7z
